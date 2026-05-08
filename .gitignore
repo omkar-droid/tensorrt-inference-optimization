@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Built engines and ONNX models — large binaries, regenerate from source
+engines/*.engine
+engines/*.cache
+*.onnx
+
+# Calibration / validation data — downloaded on demand
+data/calibration/*
+data/val_subset/*
+!data/calibration/.gitkeep
+!data/val_subset/.gitkeep
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
