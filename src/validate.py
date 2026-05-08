@@ -30,7 +30,7 @@ def _load_val_subset(num_samples: int, cache_dir: Path) -> list[tuple[Path, int]
     """Download a 5K-image ImageNet val subset and return (image_path, label) pairs."""
     from datasets import load_dataset
 
-    ds = load_dataset("imagenet-1k", split="validation", streaming=True)
+    ds = load_dataset("evanarlian/imagenet_1k_resized_256", split="val", streaming=True)
     cache_dir.mkdir(parents=True, exist_ok=True)
     pairs: list[tuple[Path, int]] = []
     for i, ex in enumerate(tqdm(ds, total=num_samples, desc="downloading val subset")):
