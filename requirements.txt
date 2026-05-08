@@ -5,6 +5,7 @@ torchvision>=0.16.0
 # ONNX bridge
 onnx>=1.16.0
 onnxruntime-gpu>=1.17.0
+onnxscript>=0.1.0   # required by torch.onnx.export on PyTorch 2.5+
 
 # TensorRT (Linux + NVIDIA only — installs no-op on macOS, see README)
 tensorrt>=10.0.0
