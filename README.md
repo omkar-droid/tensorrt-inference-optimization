@@ -4,7 +4,7 @@ Convert pretrained ResNet18/34 to TensorRT, apply FP16 mixed-precision via Tenso
 
 > **TL;DR** — On an NVIDIA T4 GPU, TRT FP16 cuts ResNet18 inference latency by ~40% vs TRT FP32 (batch=1) while staying within 0.1pp top-1 accuracy of PyTorch. INT8 PTQ keeps accuracy within 1pp.
 >
-> *(Fill the exact numbers in after running [`notebooks/tensorrt_inference.ipynb`](notebooks/tensorrt_inference.ipynb).)*
+> 
 
 ---
 
