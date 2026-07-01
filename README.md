@@ -91,10 +91,10 @@ python -m src.plot_results
 
 | Metric | Value |
 |---|---|
-| TRT FP16 latency reduction vs TRT FP32 (ResNet18, bs=1) | *fill from `results/benchmarks.json`* |
-| TRT FP16 top-1 accuracy drop vs PyTorch baseline | *fill from `results/accuracy.json`* |
-| TRT INT8 top-1 accuracy drop vs PyTorch baseline | *fill from `results/accuracy.json`* |
-| ONNX nodes → TRT engine layers (ResNet18 FP16) | *fill from `results/trt_layers.txt`* |
+| TRT FP16 latency reduction vs TRT FP32 (ResNet18, bs=1) | * `results/benchmarks.json`* |
+| TRT FP16 top-1 accuracy drop vs PyTorch baseline | * `results/accuracy.json`* |
+| TRT INT8 top-1 accuracy drop vs PyTorch baseline | * `results/accuracy.json`* |
+| ONNX nodes → TRT engine layers (ResNet18 FP16) | * `results/trt_layers.txt`* |
 
 ## References
 
