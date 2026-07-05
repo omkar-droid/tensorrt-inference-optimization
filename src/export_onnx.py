@@ -44,6 +44,13 @@ def export(model_name: str, output_path: Path, opset: int = 17) -> None:
 
     onnx_model = onnx.load(str(output_path))
     onnx.checker.check_model(onnx_model)
+    # Some torch versions emit weights as an external .onnx.data sidecar;
+    # collapse them into one self-contained file so TensorRT's parser
+    # (which reads the raw bytes) finds all initializers inline.
+    onnx.save_model(onnx_model, str(output_path), save_as_external_data=False)
+    _sidecar = Path(str(output_path) + ".data")
+    if _sidecar.exists():
+        _sidecar.unlink()
     print(f"[ok] exported {model_name} -> {output_path} (opset {opset})")
 
     _verify_parity(model, output_path, dummy)
